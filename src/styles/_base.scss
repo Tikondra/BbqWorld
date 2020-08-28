@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  line-height: 1.15; /* 1 */
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  font-family: "Tahoma", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.back {
+  max-width: 1920px;
+  margin: auto;
+  background-image: url("../img/back.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
