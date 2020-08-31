@@ -30,15 +30,13 @@
     "postcss-loader": "^3.0.0",
     "sass-loader": "^9.0.3",
     "style-loader": "^1.2.1",
+    "svg-sprite-loader": "^5.0.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "@babel/polyfill": "^7.10.4",
-    "normalize.css": "^8.0.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0"
+    "normalize.css": "^8.0.1"
   }
 }

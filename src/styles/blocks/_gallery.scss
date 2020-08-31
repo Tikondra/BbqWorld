@@ -1,0 +1,15 @@
+.gallery {
+  padding: $gap;
+}
+
+.gallery__title {
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.gallery__list {
+  @include list;
+}

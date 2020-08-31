@@ -1,0 +1,29 @@
+.social {
+  @include list;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.social__item {
+  margin: 15px;
+}
+
+.social__link {
+  text-decoration: none;
+  color: white;
+}
+
+@media (min-width: 1024px) {
+  .social {
+    padding: 0;
+  }
+
+  .social__item {
+    margin: 5px;
+  }
+
+  .social__link {
+    color: #1c1613;
+  }
+}

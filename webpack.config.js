@@ -2,11 +2,12 @@ const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
-  entry: ['@babel/polyfill', './index.jsx'],
+  entry: ['@babel/polyfill', './index.js'],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -21,7 +22,22 @@ module.exports = {
       template: './index.html'
     }),
     new CleanWebpackPlugin(),
-
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "img",
+          to: "./img",
+        },
+        {
+          from: "js",
+          to: "./js",
+        },
+        {
+          from: "css",
+          to: "./css",
+        },
+      ]
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css'
     })
@@ -71,17 +87,8 @@ module.exports = {
 
       },
       {
-        test: /\.jsx$/,
-        exclude: /node_modules/,
-        loader: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              '@babel/preset-react'
-            ]
-          }
-        },
-
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader'
       }
     ]
   }

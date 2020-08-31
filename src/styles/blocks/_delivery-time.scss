@@ -1,0 +1,15 @@
+.delivery-time {
+  display: flex;
+  align-items: center;
+}
+
+.delivery-time__text {
+  max-width: 100px;
+  margin-left: 15px;
+  font-size: 18px;
+  line-height: 22px;
+
+  span {
+    border-bottom: 2px solid #ef4b4b;
+  }
+}
