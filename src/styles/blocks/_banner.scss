@@ -1,7 +1,7 @@
 .banner {
   margin-top: -146px;
   padding: 150px $gap 40px;
-  background-image: url("../img/banner.png");
+  background-image: url("../img/banner2.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -33,8 +33,21 @@
 
 @media (min-width: 1024px) {
   .banner {
+    position: relative;
     height: 843px;
     padding: 180px $gap 40px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -75px;
+      left: 15%;
+      width: 252px;
+      height: 207px;
+      background-image: url("../img/pepper.png");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 
   .banner__title {

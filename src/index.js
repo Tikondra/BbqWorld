@@ -57,9 +57,9 @@ var myIcon = L.icon({
   iconSize: [60, 60],
 });
 
-L.marker([46.400367, 48.091495], {icon: myIcon}).addTo(map).bindTooltip("Жилая, 1").openTooltip();
-L.marker([46.355315, 48.077743], {icon: myIcon}).addTo(map).bindTooltip("Куликова 50в").openTooltip();
-L.marker([46.333398, 48.012269], {icon: myIcon}).addTo(map).bindTooltip("Богдана Хмельницкого, 10а").openTooltip();
+L.marker([46.400367, 48.091495], {icon: myIcon}).addTo(map).bindTooltip("Жилая, 1");
+L.marker([46.355315, 48.077743], {icon: myIcon}).addTo(map).bindTooltip("Куликова 50в");
+L.marker([46.333398, 48.012269], {icon: myIcon}).addTo(map).bindTooltip("Богдана Хмельницкого, 10а");
 
 L.tileLayer.provider('Jawg.Dark', {
   accessToken: 'c61oqWrV1RRTACkEr2NzXh4veCu7O4f9Ue2fru1eAikIn0EDpOi2CECI8dERQMBQ'
