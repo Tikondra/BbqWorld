@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/magnific-popup.css" />
+  <link rel="stylesheet" href="css/leaflet.css" />
   <title>BBQ World</title>
 </head>
 <body>
@@ -83,7 +84,7 @@
           </p>
         </div>
         <div class="menu__back">
-          <ul class="menu__list popup-gallery owl-carousel">
+          <div class="menu__list menu__carousel popup-gallery owl-carousel">
             <a href="img/menu/bbq.jpg" title="Блюда на мангале">
               <img src="img/menu/bbq.jpg" alt="На мангале">
             </a>
@@ -108,7 +109,7 @@
             <a href="img/menu/beer.jpg" title="Пивная карта">
               <img src="img/menu/beer.jpg" alt="Пивная карта">
             </a>
-          </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -163,39 +164,131 @@
       <h2 class="gallery__title">Галлерея кафе</h2>
       <ul class="gallery__list">
         <li class="gallery__item">
-          <img src="" alt="">
+          <img src="img/gallery1.png" alt="">
         </li>
-        <li class="gallery__item"></li>
-        <li class="gallery__item"></li>
-        <li class="gallery__item"></li>
-        <li class="gallery__item"></li>
-        <li class="gallery__item"></li>
+        <li class="gallery__item">
+          <img src="img/gallery2.png" alt="">
+        </li>
+        <li class="gallery__item">
+          <img src="img/gallery3.png" alt="">
+        </li>
+        <li class="gallery__item">
+          <img src="img/gallery4.png" alt="">
+        </li>
+        <li class="gallery__item">
+          <img src="img/gallery5.png" alt="">
+        </li>
+        <li class="gallery__item">
+          <img src="img/gallery6.png" alt="">
+        </li>
       </ul>
+      <a class="gallery__btn btn" href="">Перейти к галерее</a>
+    </section>
+    <section class="reviews">
+      <h2 class="reviews__title">Отзывы о нашем кафе</h2>
+      <ul class="reviews__list reviews__carousel owl-carousel">
+        <li class="reviews__item">
+          <div class="reviews__wrapper">
+            <img src="img/avatar.png" alt="">
+            <div class="reviews__content">
+              <p class="reviews__name">Георгий Крестов</p>
+              <p class="reviews__text">
+                «Все было очень здорово! Отличный персонал, прекрачный интерьер. Недалеко от города,
+                добираться легко!»
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <li class="reviews__item">
+          <div class="reviews__wrapper">
+            <img src="img/avatar.png" alt="">
+            <div class="reviews__content">
+              <p class="reviews__name">Георгий Крестов</p>
+              <p class="reviews__text">
+                «Все было очень здорово! Отличный персонал, прекрачный интерьер. Недалеко от города,
+                добираться легко!»
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <li class="reviews__item">
+          <div class="reviews__wrapper">
+            <img src="img/avatar.png" alt="">
+            <div class="reviews__content">
+              <p class="reviews__name">Георгий Крестов</p>
+              <p class="reviews__text">
+                «Все было очень здорово! Отличный персонал, прекрачный интерьер. Недалеко от города,
+                добираться легко!»
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <a class="reviews__btn btn" href="">Оставить свой отзыв</a>
+    </section>
+    <section class="contacts">
+      <div class="contacts__info">
+        <div class="contacts__wrapper">
+          <h2 class="contacts__title">Мы ждем вас в&nbsp;гости!</h2>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <p class="contacts__address">Ул. Жилая, 1</p>
+              <a class="contacts__phone" href="tel:88512777999">+7 (8512) 777 - 999</a>
+            </li>
+            <li class="contacts__item">
+              <p class="contacts__address">Куликова, 50в</p>
+              <a class="contacts__phone" href="tel:89275555828">+7 (927) 555 - 5828</a>
+            </li>
+            <li class="contacts__item">
+              <p class="contacts__address">Богдана Хмельницкого, 10а</p>
+              <a class="contacts__phone" href="tel:88512758758">+7 (8512) 758 - 758</a>
+            </li>
+          </ul>
+          <div class="contacts__social">
+            <a class="contacts__link" href="">
+              <img src="img/vk-red.png" alt="Наша группа">
+              Наша группа
+            </a>
+            <a class="contacts__link" href="">
+              <img src="img/inst-red.png" alt="Наша группа">
+              Наш instagram
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="map" id="map"></div>
     </section>
 <!--    <img src="img/back.jpg" alt="">-->
   </main>
   <footer class="footer">
-    <img src="" alt="">
-    <ul class="navigation">
-      <li>
-        <a class="navigation__link" href="">О кафе</a>
-      </li>
-      <li>
-        <a class="navigation__link" href="">Доставка</a>
-      </li>
-      <li>
-        <a class="navigation__link" href="">Меню</a>
-      </li>
-      <li>
-        <a class="navigation__link" href="">Галлерея</a>
-      </li>
-      <li>
-        <a class="navigation__link" href="">Посмотреть на карте</a>
-      </li>
-    </ul>
+    <div class="footer__wrapper">
+      <img src="img/logo.png" alt="">
+      <ul class="navigation navigation--footer">
+        <li class="navigation__item">
+          <a class="navigation__link" href="">О кафе</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="">Доставка</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="">Меню</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="">Галлерея</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="">Посмотреть на карте</a>
+        </li>
+      </ul>
+    </div>
   </footer>
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/leaflet.js"></script>
+  <script src="js/leaflet-providers.js"></script>
 </body>
 </html>

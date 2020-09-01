@@ -1,0 +1,141 @@
+.reviews {
+  padding: $gap;
+  overflow: hidden;
+}
+
+.reviews__title {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.reviews__list {
+  @include list;
+
+  .owl-prev,
+  .owl-next {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    width: 40px;
+    height: 40px;
+    color: white!important;
+    background-image: linear-gradient( 90deg, rgb(180,20,20) 0%, rgb(248,84,84) 100%)!important;
+    border-radius: 50%;
+    outline: none;
+    font-size: 30px!important;
+  }
+
+  .owl-next {
+    right: 0;
+  }
+}
+
+.reviews__item {
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+.reviews__wrapper {
+  padding: 10px;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 9px 0 rgba(43, 14, 14, 0.17);
+
+  img {
+    display: block;
+    margin: auto;
+    width: auto!important;
+  }
+}
+
+.reviews__name {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.reviews__btn {
+  margin: 15px auto;
+}
+
+@media (min-width: 768px) {
+  .reviews__item {
+    padding: 20px;
+  }
+
+  .reviews__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .reviews__content {
+    margin-left: 20px;
+    border-left: 2px solid #e2e0e0;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .reviews__list {
+    max-width: 1000px;
+    margin: auto;
+
+    .owl-prev,
+    .owl-next {
+      margin-top: -30px;
+      width: 60px;
+      height: 60px;
+      left: -40px;
+    }
+
+    .owl-next {
+      left: auto;
+      right: -40px;
+    }
+
+    .owl-stage-outer {
+      overflow: visible!important;
+    }
+  }
+
+  .reviews__item {
+    margin: 0 100px;
+    opacity: 0.17;
+    transition: 0.8s ease;
+  }
+
+  .active .reviews__item {
+    opacity: 1;
+  }
+
+  .reviews__wrapper {
+    padding: 30px;
+    background-image: url("../img/quote.png");
+    background-repeat: no-repeat;
+    background-position: right 20px top 20px;
+  }
+
+  .reviews__title {
+    position: relative;
+    margin-bottom: 40px;
+    font-size: 36px;
+    line-height: 48px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      margin-left: -55px;
+      width: 110px;
+      height: 8px;
+      background-color: #c32323;
+    }
+  }
+
+  .reviews__btn {
+    margin: 30px auto;
+  }
+}

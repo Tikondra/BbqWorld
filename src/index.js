@@ -11,8 +11,17 @@ menuBtn.addEventListener('click', function () {
 });
 
 $(document).ready(function(){
-  $(".owl-carousel").owlCarousel({
+  $(".menu__carousel").owlCarousel({
     items: 1,
+    loop: true,
+    dots: false,
+    nav: false
+  });
+
+  $(".reviews__carousel").owlCarousel({
+    items: 1,
+    dots: false,
+    nav: true,
     loop: true
   });
 });
@@ -36,3 +45,22 @@ $(document).ready(function() {
     }
   });
 });
+
+const map = L.map('map', {
+  center: [46.367920, 48.066326],
+  zoom: 13,
+  scrollWheelZoom: false
+});
+
+var myIcon = L.icon({
+  iconUrl: 'img/icon.png',
+  iconSize: [60, 60],
+});
+
+L.marker([46.400367, 48.091495], {icon: myIcon}).addTo(map).bindTooltip("Жилая, 1").openTooltip();
+L.marker([46.355315, 48.077743], {icon: myIcon}).addTo(map).bindTooltip("Куликова 50в").openTooltip();
+L.marker([46.333398, 48.012269], {icon: myIcon}).addTo(map).bindTooltip("Богдана Хмельницкого, 10а").openTooltip();
+
+L.tileLayer.provider('Jawg.Dark', {
+  accessToken: 'c61oqWrV1RRTACkEr2NzXh4veCu7O4f9Ue2fru1eAikIn0EDpOi2CECI8dERQMBQ'
+}).addTo(map);

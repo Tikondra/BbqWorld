@@ -1,5 +1,16 @@
 .navigation {
   @include list;
+
+  &--footer {
+    padding: 20px 0;
+
+    .navigation__link {
+      padding: 3px;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 400;
+    }
+  }
 }
 
 .navigation__link {
@@ -13,16 +24,15 @@
   color: white;
 }
 
-@media (min-width: 1024px) {
-  .navigation__link {
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 400;
-  }
+@media (min-width: 768px) {
+ .navigation--footer {
+   display: flex;
+   justify-content: center;
 
-  .navigation__item {
-    margin: 0 10px;
-  }
+   .navigation__item {
+     margin: 0 10px;
+   }
+ }
 }
 
 @media (min-width: 1024px) {
@@ -32,7 +42,14 @@
     justify-content: center;
   }
 
+  .navigation__item {
+    margin: 0 10px;
+  }
+
   .navigation__link {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
 
     &--active {
       border-bottom: 1px solid #ef4b4b;

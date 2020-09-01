@@ -1,4 +1,5 @@
 .gallery {
+  @include container;
   padding: $gap;
 }
 
@@ -12,4 +13,39 @@
 
 .gallery__list {
   @include list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery__item {
+  margin: 5px;
+
+  img {
+    display: block;
+  }
+}
+
+.gallery__btn {
+  margin: 20px auto;
+}
+
+@media (min-width: 1024px) {
+  .gallery__title {
+    position: relative;
+    margin-bottom: 40px;
+    font-size: 36px;
+    line-height: 48px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      margin-left: -55px;
+      width: 110px;
+      height: 8px;
+      background-color: #c32323;
+    }
+  }
 }

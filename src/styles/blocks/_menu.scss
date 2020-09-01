@@ -23,7 +23,7 @@
   max-width: 400px;
 }
 
-.owl-item {
+.menu .owl-item {
   max-height: 273px;
 }
 
@@ -41,7 +41,7 @@
     margin-bottom: 40px;
   }
 
-  .owl-item {
+  .menu .owl-item {
     max-height: 400px;
   }
 }
@@ -56,7 +56,7 @@
     @include container;
   }
 
-  .owl-item {
+  .menu .owl-item {
     max-height: 560px;
   }
 
