@@ -24,6 +24,16 @@ $(document).ready(function(){
     nav: true,
     loop: true
   });
+
+  $(".banner__carousel").owlCarousel({
+    items: 1,
+    dots: true,
+    nav: false,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 4000,
+    smartSpeed: 700
+  });
 });
 
 $(document).ready(function() {

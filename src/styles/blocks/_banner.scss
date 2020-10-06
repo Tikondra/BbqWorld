@@ -1,62 +1,93 @@
-.banner {
+.banner__carousel {
+  @include list;
+  position: relative;
   margin-top: -146px;
-  padding: 150px $gap 40px;
-  background-image: url("../img/banner2.jpg");
+}
+
+.banner__item {
+  padding: 140px 15px 1px;
+  min-height: 500px;
+  background-image: url("../img/banner1.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
   color: white;
+
+  &--2 {
+    background-image: url("../img/banner2.jpg");
+    background-position: center top;
+  }
+
+  &--3 {
+    padding-top: 200px;
+    background-image: url("../img/banner3.jpg");
+    background-position: center top;
+  }
+
+  &--4 {
+    background-image: url("../img/banner4.jpg");
+    background-position: center top;
+  }
 }
 
 .banner__title {
   max-width: 400px;
-  font-size: 46px;
-  line-height: 54px;
+  font-size: 24px;
+  line-height: 34px;
   font-weight: 900;
   text-transform: uppercase;
 }
 
 .banner__text {
-  max-width: 400px;
-  padding-left: 10px;
-  font-size: 30px;
-  line-height: 38px;
+  max-width: 246px;
+  font-size: 20px;
+  line-height: 26px;
   font-weight: 300;
-  border-left: 4px solid #ef4b4b;
-}
-
-@media (min-width: 768px) {
-  .banner__wrapper {
-    @include container;
-  }
 }
 
 @media (min-width: 1024px) {
-  .banner {
-    position: relative;
-    height: 843px;
-    padding: 180px $gap 40px;
+  .banner__content {
+    @include container;
+  }
 
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: -75px;
-      left: 15%;
-      width: 252px;
-      height: 207px;
-      background-image: url("../img/pepper.png");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
+  .banner__item {
+    min-height: 700px;
   }
 
   .banner__title {
-    max-width: 600px;
-    font-size: 60px;
-    line-height: 80px;
+    max-width: 650px;
+    font-size: 42px;
+    line-height: 60px;
   }
 
   .banner__text {
     max-width: 330px;
+  }
+
+  .banner__carousel {
+    .owl-dots {
+      position: absolute;
+      top: 50%;
+      right: 100px;
+      width: 40px;
+      height: 140px;
+      margin-top: -70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      .owl-dot {
+        width: 17px;
+        height: 17px;
+        background-color: white;
+        border-radius: 50%;
+        outline: none;
+
+        &.active {
+          background-color: #ef4b4b;
+        }
+      }
+    }
   }
 }
