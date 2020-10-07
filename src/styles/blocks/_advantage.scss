@@ -1,4 +1,4 @@
-.advantage {
+.advantage__wrapper {
   padding: $gap;
 }
 
@@ -14,13 +14,29 @@
 }
 
 .advantage__title {
+  position: relative;
   margin: 0 0 15px;
   padding-left: 10px;
   font-size: 28px;
   line-height: 32px;
   font-weight: 900;
   text-transform: uppercase;
-  border-left: 9px solid #c32222;
+  text-align: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -30px;
+    width: 60px;
+    height: 6px;
+    background-color: #ef4b4b;
+  }
+}
+
+.advantage__subtitle {
+  font-weight: 900;
 }
 
 .advantage__text {
@@ -34,7 +50,7 @@
 }
 
 @media (min-width: 1024px) {
-  .advantage {
+  .advantage__wrapper {
     @include container;
     display: flex;
   }

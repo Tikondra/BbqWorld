@@ -18,6 +18,10 @@
   line-height: 24px;
 }
 
+.menu__btn {
+  margin: 20px auto;
+}
+
 .menu__list {
   @include list;
   max-width: 400px;
@@ -43,6 +47,10 @@
 
   .menu .owl-item {
     max-height: 400px;
+  }
+
+  .menu__btn {
+    margin: 50px 0;
   }
 }
 

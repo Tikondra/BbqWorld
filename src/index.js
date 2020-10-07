@@ -99,3 +99,57 @@ window.addEventListener('scroll', function() {
     document.querySelector('header').classList.remove('header--mini');
   }
 });
+
+const modal = document.querySelector('.modal');
+const closeModal = modal.querySelector('.modal__close');
+const deliveryBtn = document.querySelector('.delivery__btn');
+const reviewsBtn = document.querySelector('.reviews__btn');
+const modalSubmit = modal.querySelector('.modal__form');
+let typeForm;
+
+const modalTemplate = () => {
+  return (
+    `<p class="modal__title">Оставьте заявку, мы вам перезвоним и уточним детали заказа</p>
+     <input class="modal__input" type="text" required placeholder="Ваше имя" minlength="3">
+     <input class="modal__input" type="tel" required placeholder="Ваш номер">
+     <button class="modal__btn btn" type="submit">Отправить</button>`
+  )
+};
+
+const modalReviewsTemplate = () => {
+  return (
+    `<p class="modal__title">Оставьте отзыв о нашем заведении</p>
+    <input class="modal__input" type="text" required placeholder="Ваше имя" minlength="3">
+    <textarea class="modal__input" name="review" id="review" cols="30" rows="10" placeholder="Ваш отзыв, не более 300 символов"></textarea>
+    <button class="modal__btn btn" type="submit">Отправить</button>`
+  )
+};
+
+modal.addEventListener('click', (evt) => {
+  if (evt.target === modal) {
+    modal.classList.add('modal--close')
+  }
+});
+
+closeModal.addEventListener('click', (evt) => {
+    modal.classList.add('modal--close')
+});
+
+deliveryBtn.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  modalSubmit.innerHTML = modalTemplate();
+  modal.classList.remove('modal--close');
+  typeForm = 'delivery';
+});
+
+reviewsBtn.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  modalSubmit.innerHTML = modalReviewsTemplate();
+  modal.classList.remove('modal--close');
+  typeForm = 'review';
+});
+
+modalSubmit.addEventListener('submit', (evt) => {
+  evt.preventDefault();
+  modalSubmit.innerHTML = typeForm === 'delivery' ? `<p class="modal__title">Ваша заявка принята!</p>` : `<p class="modal__title">Ваш отзыв получен!</p>`;
+});
