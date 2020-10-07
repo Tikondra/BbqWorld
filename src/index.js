@@ -74,3 +74,28 @@ L.marker([46.333398, 48.012269], {icon: myIcon}).addTo(map).bindTooltip("Бог�
 L.tileLayer.provider('Jawg.Dark', {
   accessToken: 'c61oqWrV1RRTACkEr2NzXh4veCu7O4f9Ue2fru1eAikIn0EDpOi2CECI8dERQMBQ'
 }).addTo(map);
+
+
+$("a.scroll-to").on("click", function(e){
+  e.preventDefault();
+  var anchor = $(this).attr('href');
+  $('html, body').stop().animate({
+    scrollTop: $(anchor).offset().top
+  }, 800);
+  var elements = document.querySelectorAll('.navigation__link');
+
+  if (elements) {
+    for ( var i = 0; i < elements.length; i++) {
+      elements[i].classList.remove('navigation__link--active');
+    }
+  }
+  $(this).addClass('navigation__link--active');
+});
+
+window.addEventListener('scroll', function() {
+  if (pageYOffset > 70) {
+    document.querySelector('header').classList.add('header--mini');
+  } else if (pageYOffset < 70) {
+    document.querySelector('header').classList.remove('header--mini');
+  }
+});

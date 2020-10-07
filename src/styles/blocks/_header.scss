@@ -1,8 +1,9 @@
-.header {
+.header__wrapper {
   position: relative;
   z-index: 2;
   padding: 15px;
   height: 146px;
+  transition: 0.3s ease;
 }
 
 .header__navigation {
@@ -65,11 +66,29 @@
 }
 
 @media (min-width: 1024px) {
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 500;
+
+    &--mini {
+      background-color: #0a090a;
+      .header__wrapper {
+        height: 50px;
+      }
+
+      .header__logo,
+      .header__info {
+        display: none;
+      }
+    }
+  }
+
   .header__nav-btn {
     display: none;
   }
 
-  .header {
+  .header__wrapper {
     @include container;
     display: flex;
   }
